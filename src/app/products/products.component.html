@@ -1,0 +1,10 @@
+
+<h1>Products</h1>
+
+<ul class="products">
+  <li *ngFor="let product of productsList">
+    <img [src]="product.thumbnailUrl" [alt]="product.name">
+    <p>{{ product.title }}</p>
+    <button (click)="addToCart(product)">ADD TO CART</button>
+  </li>
+</ul>

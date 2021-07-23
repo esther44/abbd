@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  li{
+    list-style: none;
+  }
+
+  button {
+    border: 0;
+    background: none;
+  }
+}

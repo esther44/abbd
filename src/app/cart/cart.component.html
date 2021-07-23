@@ -1,0 +1,12 @@
+<h1>Cart</h1>
+
+<ul>
+  <li *ngFor="let product of productsList">
+    X {{product.elemNumbers}}
+    <img [src]="product.value[0]?.thumbnailUrl" [alt]="product.value[0].name"/>
+    <h2>Product {{product.value[0].id}}</h2>
+    <p>{{product.value[0].title}}</p>
+    <button (click)="removeElement(product.value[0].id, product.elemNumbers)">REMOVE</button>
+  </li>
+</ul>
+<p *ngIf="productsList.length === 0">Your cart is empty</p>

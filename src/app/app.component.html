@@ -1,0 +1,13 @@
+<app-header
+            [totalElement]="totalElement"
+            (productsPage)="setProductsPage($event)"
+            (cartPage)="setCartPage($event)"></app-header>
+<app-products
+            *ngIf="showProductsPage"
+            [newProductList]="newProductList"
+            (totalCount)="setTotalElement($event)"
+            (cartList)="setCartList($event)"></app-products>
+<app-cart *ngIf="showCartPage"
+          [totalElement]="totalElement"
+          [cartList]="cartList"
+          (cartListUpdated)="setNewCartList($event)"></app-cart>
